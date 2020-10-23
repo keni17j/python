@@ -17,6 +17,7 @@ if __name__ == '__main__':
     dir_name = date + "_" + file_name[:-3]
     dir_path = os.path.join(dir_path, dir_name)
     if not os.path.exists(dir_path): os.mkdir(dir_path)
+    os.chdir(dir_path)
     # run the main function
     print("\n", "----- start -----", "\n")
     main()
