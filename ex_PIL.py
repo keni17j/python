@@ -5,7 +5,14 @@ import datetime
 
 
 def main():
-    print("hello")
+    # find files
+    dir_path = input("--> ")
+    res = glob.glob(os.path.join(dir_path, "**", "*.py"), recursive=True)
+    print(res, "\n")
+
+    # show the list
+    for i,j in enumerate(res): print(i, j)
+
 
 
 def make_dir():
