@@ -2,16 +2,13 @@ import os
 import sys
 import glob
 import datetime
-
+import PIL
 
 def main():
-    # find files
-    dir_path = input("--> ")
-    res = glob.glob(os.path.join(dir_path, "**", "*.py"), recursive=True)
-    print(res, "\n")
+    # select an image
+    file_path = input("--> ")
 
-    # show the list
-    for i,j in enumerate(res): print(i, j)
+    
 
 
 

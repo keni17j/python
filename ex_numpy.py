@@ -18,6 +18,8 @@ def main():
     x = np.arange(0, 10, 1)
     print(x)
 
+    x = x[::-1]
+    print(x)
 
     x = np.full((3,3), 9)
     print(x)
@@ -49,8 +51,17 @@ def main():
     x_where = np.where(x_where==100, 1, 0) # replace 100 to 1 and others to 0
     print(x_where)
 
-    x = np.arange(0, 100, 10)
+    x = np.random.randint(0, 100, 10)
     print(x)
+    x = np.sort(x)
+    print(x)
+
+    x = np.random.randint(0, 100, (5,5))
+    print(x)
+    idx = np.argsort(x[:,0])
+    x = x[idx]
+    print(x)
+
 
 
     sys.exit()
