@@ -1,7 +1,7 @@
 import sys
 import numpy as np
 import math
-
+#import matplotlib.pyplot as plt
 
 def main():
 
@@ -9,12 +9,10 @@ def main():
     # suppress: no exponential notation
     np.set_printoptions(precision=2, suppress=True)
 
-    print("")
     ndarrays()
-    #statistics()
-    #fft()
+    statistics()
+    fft()
     hist()
-    print("")
 
 
 def ndarrays():
@@ -22,6 +20,9 @@ def ndarrays():
     # list
     x = np.array([0, 1, 2, 3, 4], dtype=int)
     x = np.array([0, 1, 2, 3, 4])
+
+    # show shapes
+    print(x.shape)
 
     # reverse
     x = x[::-1]
@@ -63,7 +64,7 @@ def ndarrays():
     x[idx] = ">5"
 
     x = np.arange(10) # object can include different types
-    x = np.where(x>5, 1, 0) # replace 100 to 1 and others to 0
+    x = np.where(x>5, 1, 0) # replace x>5 to 1 and others to 0
 
     # sort
     y = np.random.randint(0, 100, 10)
@@ -164,10 +165,13 @@ def fft():
     freq = freq[:int(n/2)]
 
     print(np.amax(fft), np.amin(fft))
+
+    """
     plt.plot(freq, fft)
     plt.show(block=False)
-    plt.pause(10)
+    input()
     plt.close()
+    """
 
 
 def hist():
