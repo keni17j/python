@@ -25,7 +25,7 @@ def main():
     # Edit images.
     img_edited = edit(img)
     cv.imshow('image', img_edited)
-    cv.waitKey(10000)  # Wait for 10s.
+    cv.waitKey(0)  # Wait keys.
     cv.destroyAllWindows()
     draw(img)
     mouse_event(img)
@@ -103,6 +103,7 @@ def draw(image):
     img = image
 
     cv.line(img, (0, 0), (512, 512), (0, 0, 0), 3)
+    cv.arrowedLine(img, (0, 512), (200, 300), (255, 255, 255), 3, tipLength=0.1)
     cv.rectangle(img, (200, 200), (300, 300), (0, 255, 0), 3)
     cv.circle(img, (250, 250), 50, (255, 0, 0), 3)
     cv.ellipse(img, (250, 250), (50, 25), 0, 0, 360, (0, 0, 255), 3)
