@@ -1,30 +1,21 @@
 """
 Tkinter.
 I cannot run this code in a vertual enviroment.
-There are many events thet I din't use this time.
+There are many events that I din't use this time.
 
-Widget common options.
-anchor: Position.
-width
-height
-padx
-pady
-bd: Border width.
-relief
-bg: Background color.
-fg: Foreground color.
-highlightbackground
-highlightcolor
-highlightthickness
-text
-textvariable: Use a tk variable.
-image
-bitmap
+Keywords that helps you.
+1. Widget common options.
+2. bind() events.
+3. pack(), grid() and position() options.
 
-How to change options after.
+How to change options.
 widget_name.config(option_name=values)
+How to get options.
+widget_name.cget(option_name)
+* When I get the size of the canvas, I use winfo_width.
 
 Tk variables is used as the textvariable.
+var = tk.StringVar()
 var.set(): Set values.
 var.get(): Get values.
 
@@ -46,7 +37,7 @@ from tkinter.scrolledtext import ScrolledText
 
 def main():
 
-    print('Hello')
+    print('Start GUI test.')
     TkGUI()
 
 
